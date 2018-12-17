@@ -1,0 +1,59 @@
+{
+  "name": "debug-logger",
+  "version": "1.0.0",
+  "description": "A web application for visualizing debug logs from other applications",
+  "repository": "git@github.com:Spidy88/debug-logger.git",
+  "author": "Nick Ferraro <the.nick.ferraro@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn run build:client && yarn run build:server",
+    "start": "node dist/server",
+    "build:client": "npx webpack --config webpack.prod.js",
+    "build:server": "npx babel server/index.js -d dist/server",
+    "dev:client": "npx webpack --config webpack.dev.js --watch",
+    "dev:server": "npx nodemon --watch server --watch config --exec \"yarn run build:server && yarn start\"",
+    "lint": "npx eslint --max-warnings=0 \"client/**/*.js\" \"server/**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/polyfill": "7.2.5",
+    "@babel/preset-env": "7.2.3",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.4",
+    "babel-plugin-add-react-displayname": "0.0.5",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "clean-webpack-plugin": "1.0.0",
+    "config": "3.0.1",
+    "css-loader": "2.1.0",
+    "css-reset-and-normalize": "1.0.1",
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "html-webpack-plugin": "3.2.0",
+    "lightship": "2.0.0",
+    "node-sass": "4.11.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-router-dom": "4.3.1",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "uglifyjs-webpack-plugin": "2.1.1",
+    "webpack": "4.28.3",
+    "webpack-cli": "3.1.2",
+    "webpack-merge": "4.1.5",
+    "winston": "3.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "5.11.1",
+    "eslint-plugin-react": "7.12.0",
+    "husky": "1.3.1",
+    "nodemon": "1.18.9"
+  }
+}
