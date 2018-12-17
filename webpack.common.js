@@ -45,7 +45,7 @@ module.exports = {
             test: /\.(js|jsx)$/,
             include: path.join(__dirname, 'client'),
             use: [
-                'babel-loader',
+                'babel-loader'
             ]
         }, {
             test: /\.scss$/,
@@ -53,6 +53,12 @@ module.exports = {
                 'style-loader',
                 'css-loader',
                 'sass-loader'
+            ]
+        }, {
+            test: /\.svg$/,
+            use: [
+                'babel-loader',
+                'react-svg-loader'
             ]
         }]
     }

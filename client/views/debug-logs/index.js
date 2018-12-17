@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import LogRow from './log-row';
 import LogControls from './log-controls';
+import EmptyFeedback from '../../components/empty-feedback';
+import Box from 'ui-box';
 import {
     Pane,
     Table
@@ -19,7 +21,25 @@ class DebugLogs extends Component {
     constructor(props) {
         super(props);
 
+        this.renderEmptyState = this.renderEmptyState.bind(this);
         this.render = this.render.bind(this);
+    }
+
+    renderEmptyState() {
+        if( this.props.logs.length ) {
+            return null;
+        }
+
+        let iconProps = {
+            icon: 'barber',
+            message: 'Waiting for logs',
+            subMessage: 'Kick back and relax'
+        };
+
+        // Render a waiting for logs feedback
+        return (
+            <EmptyFeedback {...iconProps} />
+        );
     }
 
     render() {
@@ -37,15 +57,19 @@ class DebugLogs extends Component {
                     <LogControls />
                 </Pane>
 
-                <Table>
-                    <Table.Body>
-                        {
-                            this.props.logs.map((log) => (
-                                <LogRow key={log.messageId} log={log} />
-                            ))
-                        }
-                    </Table.Body>
-                </Table>
+                <Box marginTop="calc(40px + 2rem)">
+                    { this.renderEmptyState() }
+
+                    <Table>
+                        <Table.Body>
+                            {
+                                this.props.logs.map((log) => (
+                                    <LogRow key={log.messageId} log={log} />
+                                ))
+                            }
+                        </Table.Body>
+                    </Table>
+                </Box>
             </React.Fragment>
         );
     }
