@@ -1,4 +1,5 @@
 import React from 'react';
+import DebugLogs from './views/debug-logs';
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,7 +10,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={() => (<h1>Debug Logs</h1>)} />
+                <Route exact path="/" component={DebugLogs} />
             </Switch>
         </Router>
     );
