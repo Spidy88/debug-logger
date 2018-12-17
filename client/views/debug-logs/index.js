@@ -23,10 +23,9 @@ export { DebugLogs, LogControls, LogRow };
 
 function mapStateToProps(state) {
     let isServerStatusInitialized = statusSelectors.isServerStatusInitialized(state);
-    let isSourceStatusInitialized = statusSelectors.isSourceStatusInitialized(state);
 
     let status = null;
-    if( isServerStatusInitialized && isSourceStatusInitialized ) {
+    if( isServerStatusInitialized ) {
         let isServerDisconnected = statusSelectors.isServerDisconnected(state);
         let isSourceDisconnected = statusSelectors.isSourceDisconnected(state);
 

@@ -15,5 +15,9 @@ module.exports = {
 
     logger: {
         logToConsole: true
+    },
+
+    sockets: {
+        host: ''
     }
 };

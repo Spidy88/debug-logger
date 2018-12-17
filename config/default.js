@@ -16,5 +16,9 @@ module.exports = {
 
     logger: {
         logToConsole: false
+    },
+
+    sockets: {
+        host: process.env.SOCKETS_HOST
     }
 };

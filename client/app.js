@@ -1,3 +1,4 @@
+import io from 'socket.io-client';
 import React from 'react';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
@@ -9,11 +10,30 @@ import {
     Route
 } from 'react-router-dom';
 import rootStore from './stores';
+import { appendLog } from './stores/logs';
+import {
+    setServerConnected,
+    setServerDisconnected,
+    setSourceConnected,
+    setSourceDisconnected
+} from './stores/status';
 
 const store = createStore(
     rootStore,
     applyMiddleware(createLogger({ collapsed: true, level: 'info' }))
 );
+
+try {
+    const socket = io(CONFIG.sockets.host);
+    socket.on('status', handleStatusMessage);
+    socket.on('log', handleLogMessage);
+    socket.on('connect', handleConnect);
+    socket.on('connect_error', handleDisconnect);
+    socket.on('disconnect', handleDisconnect);
+}
+catch(err) {
+    // TODO: Log error
+}
 
 function App() {
     return (
@@ -28,3 +48,20 @@ function App() {
 }
 
 export default App;
+
+function handleStatusMessage(status) {
+    let action = status.connected ? setSourceConnected : setSourceDisconnected;
+    store.dispatch(action());
+}
+
+function handleLogMessage(log) {
+    store.dispatch(appendLog(log));
+}
+
+function handleConnect() {
+    store.dispatch(setServerConnected());
+}
+
+function handleDisconnect() {
+    store.dispatch(setServerDisconnected());
+}

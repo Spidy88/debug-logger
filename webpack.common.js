@@ -9,7 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Remove server specific configurations
-let sanitizedConfig = _.pick(config, []);
+let sanitizedConfig = _.pick(config, [
+    'sockets'
+]);
 
 const cleanWebpackPlugin = new CleanWebpackPlugin([
     path.resolve(__dirname, 'dist/client')
