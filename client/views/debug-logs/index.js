@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import LogRow from './log-row';
 import LogControls from './log-controls';
 import {
-    Pane
+    Pane,
+    Table
 } from 'evergreen-ui';
 
 class DebugLogs extends Component {
     static propTypes = {
+        logs: PropTypes.array
+    };
+
+    static defaultProps = {
+        logs: []
     };
 
     constructor(props) {
@@ -28,6 +36,16 @@ class DebugLogs extends Component {
 
                     <LogControls />
                 </Pane>
+
+                <Table>
+                    <Table.Body>
+                        {
+                            this.props.logs.map((log) => (
+                                <LogRow key={log.messageId} log={log} />
+                            ))
+                        }
+                    </Table.Body>
+                </Table>
             </React.Fragment>
         );
     }
