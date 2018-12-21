@@ -4,6 +4,7 @@ import LogRow from './log-row';
 import LogControls from './log-controls';
 
 import {
+    actions as logsActions,
     selectors as logsSelectors
 } from '../../stores/logs';
 
@@ -11,7 +12,10 @@ import {
     selectors as statusSelectors
 } from '../../stores/status';
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+    pauseLogs: logsActions.pauseLogs,
+    resumeLogs: logsActions.resumeLogs
+};
 
 const DebugLogsContainer = connect(
     mapStateToProps,
@@ -36,6 +40,7 @@ function mapStateToProps(state) {
 
     return {
         logs: logsSelectors.getLogs(state),
+        isLive: logsSelectors.isLive(state),
         status
     };
 }

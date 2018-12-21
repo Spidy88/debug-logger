@@ -13,11 +13,15 @@ import {
 class DebugLogs extends Component {
     static propTypes = {
         logs: PropTypes.array,
-        status: PropTypes.string
+        status: PropTypes.string,
+        isLive: PropTypes.bool,
+        pauseLogs: PropTypes.func.isRequired,
+        resumeLogs: PropTypes.func.isRequired
     };
 
     static defaultProps = {
-        logs: []
+        logs: [],
+        isLive: true
     };
 
     constructor(props) {
@@ -38,6 +42,15 @@ class DebugLogs extends Component {
             message: 'Waiting for logs',
             subMessage: 'Kick back and relax'
         };
+
+        // If the user has the logs paused, render an empty log feedback
+        if( !this.props.isLive ) {
+            iconProps = {
+                icon: 'empty',
+                message: 'Logs paused with no results',
+                subMessage: 'Try going live to receive new log events'
+            };
+        }
 
         // Render a waiting for logs feedback
         return (
@@ -67,7 +80,10 @@ class DebugLogs extends Component {
                     top={0}
                     elevation={1}>
 
-                    <LogControls />
+                    <LogControls
+                        isLive={this.props.isLive}
+                        onPauseSelected={this.props.pauseLogs}
+                        onLiveSelected={this.props.resumeLogs} />
                 </Pane>
 
                 <Box marginTop="calc(40px + 2rem)">
