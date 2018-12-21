@@ -67,13 +67,15 @@ class LogRow extends PureComponent {
                     flexBasis="auto"
                     flex={0}
                     textTransform="uppercase"
-                    fontWeight={300}>
+                    fontWeight={300}
+                    test-id="logType">
 
                     { log.type }
                 </Table.TextCell>
 
                 <Table.TextCell
-                    textProps={eventTextProps}>
+                    textProps={eventTextProps}
+                    test-id="logMessage">
 
                     { log.event || log.messageId }
                 </Table.TextCell>
@@ -83,7 +85,8 @@ class LogRow extends PureComponent {
                     marginX="0.75em"
                     flexBasis="auto"
                     flex={0}
-                    textProps={dateTextProps}>
+                    textProps={dateTextProps}
+                    test-id="logDate">
 
                     { this.formattedLogDate() }
                 </Table.TextCell>

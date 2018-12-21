@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerStatus> should match its snapshot 1`] = `
+<div
+  className="📦bg_1whhwgh 📦pb_1rem 📦pt_1rem 📦dspl_flex 📦algn-itms_center 📦just-cnt_center 📦box-szg_border-box css-nil"
+>
+  <span
+    className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_700 📦ln-ht_20px 📦ltr-spc_-0-05px 📦box-szg_border-box"
+  >
+    Testing in progress
+  </span>
+</div>
+`;

@@ -12,11 +12,25 @@
     "build:server": "npx babel server/index.js -d dist/server",
     "dev:client": "npx webpack --config webpack.dev.js --watch",
     "dev:server": "npx nodemon --watch server --watch config --exec \"yarn run build:server && yarn start\"",
-    "lint": "npx eslint --max-warnings=0 \"client/**/*.js\" \"server/**/*.js\""
+    "lint": "npx eslint --max-warnings=0 \"client/**/*.js\" \"server/**/*.js\" \"tests/**/*.js\"",
+    "test": "npx jest --env=jsdom tests/"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
+    }
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/config/setupEnzyme.js"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/unit/**/*.{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest",
+      "^.+\\.svg$": "jest-svg-transformer"
     }
   },
   "dependencies": {
@@ -63,10 +77,18 @@
     "winston": "3.1.0"
   },
   "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
     "eslint": "5.11.1",
     "eslint-plugin-react": "7.12.0",
     "husky": "1.3.1",
-    "nodemon": "1.18.9"
+    "jest": "23.6.0",
+    "jest-svg-transformer": "1.0.0",
+    "nodemon": "1.18.9",
+    "react-test-renderer": "16.7.0",
+    "timezone-mock": "1.0.2"
   }
 }

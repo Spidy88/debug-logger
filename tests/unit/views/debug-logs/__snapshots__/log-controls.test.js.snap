@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogControls> should match its snapshot 1`] = `
+Array [
+  <div
+    className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦bg_11ev722 📦box-szg_border-box"
+  >
+    <div
+      className="📦dspl_flex 📦mr_-1px 📦h_40px 📦flx-srnk_1 📦flx-grow_0 📦w_10rem 📦box-szg_border-box"
+    >
+      <div
+        className="css-3grw6g css-4b8qak 📦btlr_3px 📦bblr_3px 📦box-szg_border-box"
+        data-active={true}
+      >
+        <input
+          checked={true}
+          className="css-87b09r"
+          id="SegmentedControl-10"
+          name="SegmentedControl-1"
+          onChange={[Function]}
+          type="radio"
+          value="live"
+        />
+        <label
+          className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+          htmlFor="SegmentedControl-10"
+        >
+          Live
+        </label>
+      </div>
+      <div
+        className="css-3grw6g css-4b8qak 📦btrr_3px 📦bbrr_3px 📦box-szg_border-box"
+        data-active={false}
+      >
+        <input
+          checked={false}
+          className="css-87b09r"
+          id="SegmentedControl-11"
+          name="SegmentedControl-1"
+          onChange={[Function]}
+          type="radio"
+          value="pause"
+        />
+        <label
+          className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+          htmlFor="SegmentedControl-11"
+        >
+          Pause
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦w_100prcnt 📦box-szg_border-box"
+  >
+    <div
+      className="📦pst_relative 📦dspl_inline-flex 📦h_40px 📦flx-grow_1 📦w_100prcnt 📦box-szg_border-box"
+    >
+      <div
+        className="📦h_40px 📦w_40px 📦ptr-evts_none 📦pst_absolute 📦dspl_flex 📦just-cnt_center 📦algn-itms_center 📦box-szg_border-box"
+      >
+        <svg
+          className="📦z-idx_3 📦w_16px 📦h_16px 📦box-szg_border-box"
+          data-icon="search"
+          style={
+            Object {
+              "fill": "#66788A",
+            }
+          }
+          viewBox="0 0 16 16"
+        >
+          <title>
+            search
+          </title>
+          <path
+            d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+      <input
+        aria-invalid={false}
+        className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
+        disabled={false}
+        placeholder="Type to search..."
+        spellCheck={true}
+        type="text"
+      />
+    </div>
+  </div>,
+]
+`;

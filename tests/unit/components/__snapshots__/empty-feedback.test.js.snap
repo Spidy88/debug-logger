@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyFeedback> should render the feedback component 1`] = `
+<div
+  className="📦pb_1rem 📦pt_1rem 📦dspl_flex 📦flx-drct_column 📦algn-itms_center 📦just-cnt_center 📦box-szg_border-box css-nil"
+>
+  <svg
+    data-file-name="SvgUndraw_barber_3uel"
+    height="20rem"
+    width="20rem"
+  />
+  <span
+    className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_2rem 📦f-wght_500 📦ln-ht_2-5rem 📦ltr-spc_-0-05px 📦mb_12px 📦box-szg_border-box"
+  >
+    Test message
+  </span>
+  <span
+    className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_1-5rem 📦f-wght_300 📦ln-ht_1-75rem 📦ltr-spc_-0-05px 📦box-szg_border-box"
+  >
+    A message below the main message
+  </span>
+</div>
+`;

@@ -1,0 +1,808 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DebugLogs> should match its snapshot (empty logs) 1`] = `
+Array [
+  <div
+    className="📦bs_17bru36 📦bg_1eozcqw 📦pl_0-75rem 📦pr_0-75rem 📦dspl_flex 📦pst_fixed 📦w_100prcnt 📦top_0px 📦box-szg_border-box css-nil"
+  >
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦bg_11ev722 📦box-szg_border-box"
+    >
+      <div
+        className="📦dspl_flex 📦mr_-1px 📦h_40px 📦flx-srnk_1 📦flx-grow_0 📦w_10rem 📦box-szg_border-box"
+      >
+        <div
+          className="css-3grw6g css-4b8qak 📦btlr_3px 📦bblr_3px 📦box-szg_border-box"
+          data-active={true}
+        >
+          <input
+            checked={true}
+            className="css-87b09r"
+            id="SegmentedControl-50"
+            name="SegmentedControl-5"
+            onChange={[Function]}
+            type="radio"
+            value="live"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-50"
+          >
+            Live
+          </label>
+        </div>
+        <div
+          className="css-3grw6g css-4b8qak 📦btrr_3px 📦bbrr_3px 📦box-szg_border-box"
+          data-active={false}
+        >
+          <input
+            checked={false}
+            className="css-87b09r"
+            id="SegmentedControl-51"
+            name="SegmentedControl-5"
+            onChange={[Function]}
+            type="radio"
+            value="pause"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-51"
+          >
+            Pause
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦w_100prcnt 📦box-szg_border-box"
+    >
+      <div
+        className="📦pst_relative 📦dspl_inline-flex 📦h_40px 📦flx-grow_1 📦w_100prcnt 📦box-szg_border-box"
+      >
+        <div
+          className="📦h_40px 📦w_40px 📦ptr-evts_none 📦pst_absolute 📦dspl_flex 📦just-cnt_center 📦algn-itms_center 📦box-szg_border-box"
+        >
+          <svg
+            className="📦z-idx_3 📦w_16px 📦h_16px 📦box-szg_border-box"
+            data-icon="search"
+            style={
+              Object {
+                "fill": "#66788A",
+              }
+            }
+            viewBox="0 0 16 16"
+          >
+            <title>
+              search
+            </title>
+            <path
+              d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <input
+          aria-invalid={false}
+          className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
+          disabled={false}
+          placeholder="Type to search..."
+          spellCheck={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="📦mt_19w9unu 📦box-szg_border-box"
+  >
+    <div
+      className="📦pb_1rem 📦pt_1rem 📦dspl_flex 📦flx-drct_column 📦algn-itms_center 📦just-cnt_center 📦box-szg_border-box css-nil"
+    >
+      <svg
+        data-file-name="SvgUndraw_barber_3uel"
+        height="20rem"
+        width="20rem"
+      />
+      <span
+        className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_2rem 📦f-wght_500 📦ln-ht_2-5rem 📦ltr-spc_-0-05px 📦mb_12px 📦box-szg_border-box"
+      >
+        Waiting for logs
+      </span>
+      <span
+        className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_1-5rem 📦f-wght_300 📦ln-ht_1-75rem 📦ltr-spc_-0-05px 📦box-szg_border-box"
+      >
+        Kick back and relax
+      </span>
+    </div>
+    <div
+      className="📦box-szg_border-box css-nil"
+    >
+      <div
+        className="📦flx_1 📦ovflw-y_scroll 📦box-szg_border-box css-nil"
+        data-evergreen-table-body={true}
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`<DebugLogs> should match its snapshot (server error) 1`] = `
+Array [
+  <div
+    className="📦bs_17bru36 📦bg_1eozcqw 📦pl_0-75rem 📦pr_0-75rem 📦dspl_flex 📦pst_fixed 📦w_100prcnt 📦top_0px 📦box-szg_border-box css-nil"
+  >
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦bg_11ev722 📦box-szg_border-box"
+    >
+      <div
+        className="📦dspl_flex 📦mr_-1px 📦h_40px 📦flx-srnk_1 📦flx-grow_0 📦w_10rem 📦box-szg_border-box"
+      >
+        <div
+          className="css-3grw6g css-4b8qak 📦btlr_3px 📦bblr_3px 📦box-szg_border-box"
+          data-active={true}
+        >
+          <input
+            checked={true}
+            className="css-87b09r"
+            id="SegmentedControl-60"
+            name="SegmentedControl-6"
+            onChange={[Function]}
+            type="radio"
+            value="live"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-60"
+          >
+            Live
+          </label>
+        </div>
+        <div
+          className="css-3grw6g css-4b8qak 📦btrr_3px 📦bbrr_3px 📦box-szg_border-box"
+          data-active={false}
+        >
+          <input
+            checked={false}
+            className="css-87b09r"
+            id="SegmentedControl-61"
+            name="SegmentedControl-6"
+            onChange={[Function]}
+            type="radio"
+            value="pause"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-61"
+          >
+            Pause
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦w_100prcnt 📦box-szg_border-box"
+    >
+      <div
+        className="📦pst_relative 📦dspl_inline-flex 📦h_40px 📦flx-grow_1 📦w_100prcnt 📦box-szg_border-box"
+      >
+        <div
+          className="📦h_40px 📦w_40px 📦ptr-evts_none 📦pst_absolute 📦dspl_flex 📦just-cnt_center 📦algn-itms_center 📦box-szg_border-box"
+        >
+          <svg
+            className="📦z-idx_3 📦w_16px 📦h_16px 📦box-szg_border-box"
+            data-icon="search"
+            style={
+              Object {
+                "fill": "#66788A",
+              }
+            }
+            viewBox="0 0 16 16"
+          >
+            <title>
+              search
+            </title>
+            <path
+              d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <input
+          aria-invalid={false}
+          className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
+          disabled={false}
+          placeholder="Type to search..."
+          spellCheck={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="📦mt_19w9unu 📦box-szg_border-box"
+  >
+    <div
+      className="📦bg_1whhwgh 📦pb_1rem 📦pt_1rem 📦dspl_flex 📦algn-itms_center 📦just-cnt_center 📦box-szg_border-box css-nil"
+    >
+      <span
+        className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_700 📦ln-ht_20px 📦ltr-spc_-0-05px 📦box-szg_border-box"
+      >
+        Testing server error
+      </span>
+    </div>
+    <div
+      className="📦box-szg_border-box css-nil"
+    >
+      <div
+        className="📦flx_1 📦ovflw-y_scroll 📦box-szg_border-box css-nil"
+        data-evergreen-table-body={true}
+      >
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              track
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              Add to Cart
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:32:21
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              identify
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              002
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:32:41
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              track
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              Subscribe to Newsletter
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:34:01
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              page
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              004
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:49:01
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`<DebugLogs> should match its snapshot 1`] = `
+Array [
+  <div
+    className="📦bs_17bru36 📦bg_1eozcqw 📦pl_0-75rem 📦pr_0-75rem 📦dspl_flex 📦pst_fixed 📦w_100prcnt 📦top_0px 📦box-szg_border-box css-nil"
+  >
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦bg_11ev722 📦box-szg_border-box"
+    >
+      <div
+        className="📦dspl_flex 📦mr_-1px 📦h_40px 📦flx-srnk_1 📦flx-grow_0 📦w_10rem 📦box-szg_border-box"
+      >
+        <div
+          className="css-3grw6g css-4b8qak 📦btlr_3px 📦bblr_3px 📦box-szg_border-box"
+          data-active={true}
+        >
+          <input
+            checked={true}
+            className="css-87b09r"
+            id="SegmentedControl-40"
+            name="SegmentedControl-4"
+            onChange={[Function]}
+            type="radio"
+            value="live"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-40"
+          >
+            Live
+          </label>
+        </div>
+        <div
+          className="css-3grw6g css-4b8qak 📦btrr_3px 📦bbrr_3px 📦box-szg_border-box"
+          data-active={false}
+        >
+          <input
+            checked={false}
+            className="css-87b09r"
+            id="SegmentedControl-41"
+            name="SegmentedControl-4"
+            onChange={[Function]}
+            type="radio"
+            value="pause"
+          />
+          <label
+            className="css-17kak1e 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_500 📦ln-ht_20px 📦ltr-spc_-0-05px 📦crsr_pointer 📦box-szg_border-box"
+            htmlFor="SegmentedControl-41"
+          >
+            Pause
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="📦ml_0-75rem 📦mr_0-75rem 📦mb_1rem 📦mt_1rem 📦w_100prcnt 📦box-szg_border-box"
+    >
+      <div
+        className="📦pst_relative 📦dspl_inline-flex 📦h_40px 📦flx-grow_1 📦w_100prcnt 📦box-szg_border-box"
+      >
+        <div
+          className="📦h_40px 📦w_40px 📦ptr-evts_none 📦pst_absolute 📦dspl_flex 📦just-cnt_center 📦algn-itms_center 📦box-szg_border-box"
+        >
+          <svg
+            className="📦z-idx_3 📦w_16px 📦h_16px 📦box-szg_border-box"
+            data-icon="search"
+            style={
+              Object {
+                "fill": "#66788A",
+              }
+            }
+            viewBox="0 0 16 16"
+          >
+            <title>
+              search
+            </title>
+            <path
+              d="M15.55 13.43l-2.67-2.68a6.94 6.94 0 0 0 1.11-3.76c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.39 0 2.68-.42 3.76-1.11l2.68 2.67a1.498 1.498 0 1 0 2.12-2.12zm-8.56-1.44c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </div>
+        <input
+          aria-invalid={false}
+          className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
+          disabled={false}
+          placeholder="Type to search..."
+          spellCheck={true}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>,
+  <div
+    className="📦mt_19w9unu 📦box-szg_border-box"
+  >
+    <div
+      className="📦box-szg_border-box css-nil"
+    >
+      <div
+        className="📦flx_1 📦ovflw-y_scroll 📦box-szg_border-box css-nil"
+        data-evergreen-table-body={true}
+      >
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              track
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              Add to Cart
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:32:21
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              identify
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              002
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:32:41
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              track
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              Subscribe to Newsletter
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:34:01
+            </span>
+          </div>
+        </div>
+        <div
+          className="css-z3ro6d 📦b-btm_1px-solid-EDF0F2 📦dspl_flex 📦h_48px 📦pl_0-75em 📦pr_0-75em 📦box-szg_border-box css-nil"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_40px 📦flx-basis_auto 📦ml_0-75em 📦mr_0-75em css-nil"
+            onKeyDown={[Function]}
+          >
+            <svg
+              className="📦w_24px 📦h_24px 📦box-szg_border-box"
+              style={
+                Object {
+                  "fill": "#1070ca",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_8em 📦flx-basis_auto 📦txt-trns_uppercase 📦f-wght_300 css-nil"
+            onKeyDown={[Function]}
+            test-id="logType"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦box-szg_border-box"
+            >
+              page
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_1 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden css-nil"
+            onKeyDown={[Function]}
+            test-id="logMessage"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_500 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_left 📦box-szg_border-box"
+            >
+              004
+            </span>
+          </div>
+          <div
+            className="css-saeo60 📦pl_12px 📦pr_12px 📦box-szg_border-box 📦flx_0 📦dspl_flex 📦algn-itms_center 📦flx-srnk_0 📦ovflw-x_hidden 📦ovflw-y_hidden 📦w_10em 📦ml_0-75em 📦mr_0-75em 📦flx-basis_auto css-nil"
+            onKeyDown={[Function]}
+            test-id="logDate"
+          >
+            <span
+              className="📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_12px 📦f-wght_400 📦ln-ht_16px 📦ltr-spc_0 📦flx_1 📦ovflw-x_hidden 📦ovflw-y_hidden 📦txt-ovrf_ellipsis 📦wht-spc_nowrap 📦txt-algn_right 📦box-szg_border-box"
+            >
+              2018/12/20 22:49:01
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
