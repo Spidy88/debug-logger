@@ -29,7 +29,11 @@ describe('<DebugLogs>', () => {
     };
 
     let testLogs;
+    let testQuery;
     let testStatus;
+    let handlePause;
+    let handleResume;
+    let handleQuery;
 
     beforeAll(() => {
         timezoneMock.register('UTC');
@@ -46,14 +50,22 @@ describe('<DebugLogs>', () => {
             TRACK_EVENT_2,
             PAGE_EVENT_1
         ];
+        testQuery = '';
         testStatus = null;
+        handlePause = jest.fn();
+        handleResume = jest.fn();
+        handleQuery = jest.fn();
     });
 
     it('should render logs', () => {
         const debugLogs = mount(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         let rows = debugLogs.find('LogRow');
@@ -72,7 +84,11 @@ describe('<DebugLogs>', () => {
         const debugLogs = mount(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         let rows = debugLogs.find('LogRow');
@@ -91,7 +107,11 @@ describe('<DebugLogs>', () => {
         const debugLogs = mount(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         let rows = debugLogs.find('LogRow');
@@ -108,7 +128,11 @@ describe('<DebugLogs>', () => {
         const tree = renderer.create(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         expect(tree.toJSON()).toMatchSnapshot();
@@ -120,7 +144,11 @@ describe('<DebugLogs>', () => {
         const tree = renderer.create(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         expect(tree.toJSON()).toMatchSnapshot();
@@ -132,7 +160,11 @@ describe('<DebugLogs>', () => {
         const tree = renderer.create(
             <DebugLogs
                 logs={testLogs}
-                status={testStatus} />
+                query={testQuery}
+                status={testStatus}
+                pauseLogs={handlePause}
+                resumeLogs={handleResume}
+                queryLogs={handleQuery} />
         );
 
         expect(tree.toJSON()).toMatchSnapshot();

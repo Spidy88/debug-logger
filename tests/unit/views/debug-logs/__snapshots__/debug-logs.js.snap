@@ -85,9 +85,12 @@ Array [
           aria-invalid={false}
           className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
           disabled={false}
+          onChange={[Function]}
           placeholder="Type to search..."
           spellCheck={true}
+          test-id="logSearch"
           type="text"
+          value=""
         />
       </div>
     </div>
@@ -211,9 +214,12 @@ Array [
           aria-invalid={false}
           className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
           disabled={false}
+          onChange={[Function]}
           placeholder="Type to search..."
           spellCheck={true}
+          test-id="logSearch"
           type="text"
+          value=""
         />
       </div>
     </div>
@@ -556,9 +562,12 @@ Array [
           aria-invalid={false}
           className="css-5ljhhe 📦color_425A70 📦fnt-fam_b77syt 📦fnt-sze_14px 📦f-wght_400 📦ln-ht_20px 📦ltr-spc_-0-05px 📦w_100prcnt 📦h_40px 📦pl_40px 📦pr_13px 📦bblr_3px 📦bbrr_3px 📦btlr_3px 📦btrr_3px 📦box-szg_border-box"
           disabled={false}
+          onChange={[Function]}
           placeholder="Type to search..."
           spellCheck={true}
+          test-id="logSearch"
           type="text"
+          value=""
         />
       </div>
     </div>
