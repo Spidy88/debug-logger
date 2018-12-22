@@ -20,18 +20,22 @@ const PauseOption = {
 class LogControls extends PureComponent {
     static propTypes = {
         isLive: PropTypes.bool,
+        query: PropTypes.string,
         onPauseSelected: PropTypes.func.isRequired,
-        onLiveSelected: PropTypes.func.isRequired
+        onLiveSelected: PropTypes.func.isRequired,
+        onQueryChanged: PropTypes.func.isRequired
     };
 
     static defaultProps = {
-        isLive: true
+        isLive: true,
+        query: ''
     };
 
     constructor(props) {
         super(props);
 
         this.handlePauseResume = this.handlePauseResume.bind(this);
+        this.handleQueryChange = this.handleQueryChange.bind(this);
         this.render = this.render.bind(this);
     }
 
@@ -47,6 +51,10 @@ class LogControls extends PureComponent {
                 // Notify listener if changing to live
                 !this.props.isLive && this.props.onLiveSelected();
         }
+    }
+
+    handleQueryChange(e) {
+        this.props.onQueryChanged(e.target.value);
     }
 
     render() {
@@ -74,7 +82,10 @@ class LogControls extends PureComponent {
                         height={40}
                         flexGrow={1}
                         width="100%"
-                        placeholder="Type to search..." />
+                        placeholder="Type to search..."
+                        value={this.props.query}
+                        test-id="logSearch"
+                        onChange={this.handleQueryChange} />
                 </Box>
             </React.Fragment>
         );

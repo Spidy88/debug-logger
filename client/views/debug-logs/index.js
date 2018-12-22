@@ -14,7 +14,8 @@ import {
 
 const mapDispatchToProps = {
     pauseLogs: logsActions.pauseLogs,
-    resumeLogs: logsActions.resumeLogs
+    resumeLogs: logsActions.resumeLogs,
+    queryLogs: logsActions.queryLogs
 };
 
 const DebugLogsContainer = connect(
@@ -41,6 +42,7 @@ function mapStateToProps(state) {
     return {
         logs: logsSelectors.getLogs(state),
         isLive: logsSelectors.isLive(state),
+        query: logsSelectors.getQuery(state),
         status
     };
 }

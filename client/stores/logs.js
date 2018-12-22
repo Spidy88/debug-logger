@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import { createAction } from 'redux-actions';
 import { createSelector } from './util';
+import LogSearch from '../services/log-search';
+
+let logSearch = new LogSearch();
 
 export const STORE_NAME = 'logsStore';
 
@@ -13,6 +16,7 @@ export const UPDATE_SETTINGS = 'logs.update-settings';
 export const RESET_SETTINGS = 'logs.reset-settings';
 export const PAUSE_LOGS = 'logs.pause';
 export const RESUME_LOGS = 'logs.resume';
+export const QUERY_LOGS = 'logs.query';
 
 export const appendLog = createAction(APPEND_LOG);
 export const clearLogs = createAction(CLEAR_LOGS);
@@ -20,6 +24,7 @@ export const updateSettings = createAction(UPDATE_SETTINGS);
 export const resetSettings = createAction(RESET_SETTINGS);
 export const pauseLogs = createAction(PAUSE_LOGS);
 export const resumeLogs = createAction(RESUME_LOGS);
+export const queryLogs = createAction(QUERY_LOGS);
 
 export const actions = {
     appendLog,
@@ -27,7 +32,8 @@ export const actions = {
     updateSettings,
     resetSettings,
     pauseLogs,
-    resumeLogs
+    resumeLogs,
+    queryLogs
 };
 
 /*****************
@@ -36,8 +42,10 @@ export const actions = {
 export const INITIAL_STATE = {
     logs: [],
     logsSnapshot: [],
+    logsFiltered: [],
     lastLogReceivedAt: null,
     isPaused: false,
+    query: '',
     settings: {
         logLimit: 200
     }
@@ -56,9 +64,24 @@ export function reducer(state = INITIAL_STATE, action) {
                 logs.length = logLimit;
             }
 
+            let paused = isPaused(state);
+            let query = getQuery(state);
+
+            // If our logs are live and a query is set, check if this new log matches the search criteria
+            let logsFiltered = state.logsFiltered;
+            if( !paused && query && logSearch.search(log, query) ) {
+                logsFiltered = [log, ...logsFiltered];
+
+                // If a log limit is in effect, keep our filtered logs to said limit
+                if( logLimit > 0 && logsFiltered.length > logLimit ) {
+                    logsFiltered.length = logLimit;
+                }
+            }
+
             return {
                 ...state,
                 logs,
+                logsFiltered,
                 lastLogReceivedAt
             };
         }
@@ -66,7 +89,9 @@ export function reducer(state = INITIAL_STATE, action) {
         case CLEAR_LOGS: {
             return {
                 ...state,
-                logs: []
+                logs: [],
+                logsSnapshot: [],
+                logsFiltered: []
             };
         }
 
@@ -113,10 +138,35 @@ export function reducer(state = INITIAL_STATE, action) {
                 return state;
             }
 
+            let logsFiltered = [];
+
+            // If query is set, update filtered logs
+            let query = getQuery(state);
+            if( query ) {
+                logsFiltered = state.logs.filter((log) => logSearch.search(log, query));
+            }
+
             return {
                 ...state,
                 isPaused: false,
-                logsSnapshot: []
+                logsSnapshot: [],
+                logsFiltered: logsFiltered
+            };
+        }
+
+        case QUERY_LOGS: {
+            let query = action.payload;
+            let logsFiltered = [];
+
+            if( query ) {
+                let logs = isPaused(state) ? state.logsSnapshot : state.logs;
+                logsFiltered = logs.filter((log) => logSearch.search(log, query));
+            }
+
+            return {
+                ...state,
+                query: action.payload,
+                logsFiltered
             };
         }
 
@@ -131,6 +181,7 @@ export function reducer(state = INITIAL_STATE, action) {
 export const selectors = {
     getLogLimit: createSelector(STORE_NAME, getLogLimit),
     getLogs: createSelector(STORE_NAME, getLogs),
+    getQuery: createSelector(STORE_NAME, getQuery),
     isPaused: createSelector(STORE_NAME, isPaused),
     isLive: createSelector(STORE_NAME, isLive)
 };
@@ -140,7 +191,16 @@ function getLogLimit(state) {
 }
 
 function getLogs(state) {
+    // If a search query is applied, returned the filtered logs
+    if( state.query ) {
+        return state.logsFiltered;
+    }
+
     return isPaused(state) ? state.logsSnapshot : state.logs;
+}
+
+function getQuery(state) {
+    return state.query;
 }
 
 function isPaused(state) {

@@ -12,16 +12,19 @@ import {
 
 class DebugLogs extends Component {
     static propTypes = {
-        logs: PropTypes.array,
+        logs: PropTypes.array.isRequired,
+        query: PropTypes.string,
         status: PropTypes.string,
         isLive: PropTypes.bool,
         pauseLogs: PropTypes.func.isRequired,
-        resumeLogs: PropTypes.func.isRequired
+        resumeLogs: PropTypes.func.isRequired,
+        queryLogs: PropTypes.func.isRequired
     };
 
     static defaultProps = {
         logs: [],
-        isLive: true
+        isLive: true,
+        query: ''
     };
 
     constructor(props) {
@@ -43,8 +46,15 @@ class DebugLogs extends Component {
             subMessage: 'Kick back and relax'
         };
 
-        // If the user has the logs paused, render an empty log feedback
-        if( !this.props.isLive ) {
+        // If the user is searching or has the logs paused, render an empty log feedback
+        if( this.props.query ) {
+            iconProps = {
+                icon: 'empty',
+                message: 'No logs matching search criteria',
+                subMessage: 'Try a different query'
+            };
+        }
+        else if( !this.props.isLive ) {
             iconProps = {
                 icon: 'empty',
                 message: 'Logs paused with no results',
@@ -82,8 +92,10 @@ class DebugLogs extends Component {
 
                     <LogControls
                         isLive={this.props.isLive}
+                        query={this.props.query}
                         onPauseSelected={this.props.pauseLogs}
-                        onLiveSelected={this.props.resumeLogs} />
+                        onLiveSelected={this.props.resumeLogs}
+                        onQueryChanged={this.props.queryLogs} />
                 </Pane>
 
                 <Box marginTop="calc(40px + 2rem)">
