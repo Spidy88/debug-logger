@@ -1,4 +1,5 @@
 import io from 'socket.io-client';
+import LogRocket from 'logrocket';
 import React from 'react';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
@@ -18,9 +19,22 @@ import {
     setSourceDisconnected
 } from './stores/status';
 
+const middleware = [];
+if( CONFIG.logRocket.isEnabled ) {
+    middleware.push(
+        LogRocket.reduxMiddleware()
+    );
+}
+else {
+    middleware.push(
+        createLogger({ collapsed: true, level: 'info' })
+    );
+}
+
+
 const store = createStore(
     rootStore,
-    applyMiddleware(createLogger({ collapsed: true, level: 'info' }))
+    applyMiddleware(...middleware)
 );
 
 try {
@@ -32,7 +46,7 @@ try {
     socket.on('disconnect', handleDisconnect);
 }
 catch(err) {
-    // TODO: Log error
+    LogRocket.captureException(err);
 }
 
 function App() {

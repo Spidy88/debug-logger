@@ -10,6 +10,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Remove server specific configurations
 let sanitizedConfig = _.pick(config, [
+    'logRocket',
     'sockets'
 ]);
 

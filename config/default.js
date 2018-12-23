@@ -18,6 +18,10 @@ module.exports = {
         logToConsole: false
     },
 
+    logRocket: {
+        isEnabled: false
+    },
+
     sockets: {
         host: process.env.SOCKETS_HOST
     }
