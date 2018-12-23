@@ -31,7 +31,6 @@ else {
     );
 }
 
-
 const store = createStore(
     rootStore,
     applyMiddleware(...middleware)

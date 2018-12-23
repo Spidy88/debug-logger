@@ -18,6 +18,10 @@ module.exports = {
         logToConsole: false
     },
 
+    sentry: {
+        isEnabled: false
+    },
+
     logRocket: {
         isEnabled: false
     },
