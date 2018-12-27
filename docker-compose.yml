@@ -12,3 +12,20 @@ stream:
     - EVENTS_PER_SECOND=2
   links:
     - redis
+
+webapp:
+  build: .
+  ports:
+    - "8888:8888"
+    - "9000:9000"
+  environment:
+    - NODE_ENV=production
+    - REDIS_URL=//redis:6379
+    - REDIS_CHANNEL=events
+    - PORT=8888
+    - HEALTH_PORT=9000
+    - LOGROCKET_ENABLED=false
+    - SENTRY_ENABLED=false
+    - SOCKETS_HOST=""
+  links:
+    - redis
