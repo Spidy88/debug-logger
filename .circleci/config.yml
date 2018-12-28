@@ -1,0 +1,125 @@
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+    - image: circleci/node:11.6.0
+    working_directory: ~/webapp
+
+jobs:
+  install-dependencies:
+    executor: node-executor
+    working_directory: ~/webapp
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies
+          command: yarn --pure-lockfile
+      - persist_to_workspace:
+          root: ~/webapp
+          paths:
+            - node_modules
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+
+  build-server:
+    executor: node-executor
+    working_directory: ~/webapp
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - run:
+          name: Build Server
+          command: yarn run build:server
+      - store_artifacts:
+          path: ~/webapp/dist/server
+      - persist_to_workspace:
+          root: ~/webapp
+          paths:
+            - dist/server
+
+  build-client-heroku:
+    executor: node-executor
+    working_directory: ~/webapp
+    environment:
+      NODE_ENV: production
+      SOCKETS_HOST: //debug-logger-demo.herokuapp.com
+      LOGROCKET_DOMAIN: twin-tangents/debug-logger-demo
+      SENTRY_DSN: https://f5ea6e90061d4786b557569671866c79@sentry.io/1362523
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - run:
+          name: Build Client for Heroku
+          command: yarn run build:client
+      - store_artifacts:
+          path: ~/webapp/dist/client
+      - persist_to_workspace:
+          root: ~/webapp
+          paths:
+          - dist/client
+
+  test:
+    executor: node-executor
+    working_directory: ~/webapp
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - run: yarn test
+
+  lint:
+    executor: node-executor
+    working_directory: ~/webapp
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - run: yarn run lint
+
+  deploy-heroku:
+    executor: node-executor
+    docker:
+      - image: buildpack-deps:trusty
+    working_directory: ~/webapp
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - deploy:
+          command: |
+            git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/debug-logger-demo.git master
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+    - install-dependencies
+    - build-server:
+        requires:
+        - install-dependencies
+    - build-client-heroku:
+        requires:
+        - install-dependencies
+    - test:
+        requires:
+        - install-dependencies
+    - lint:
+        requires:
+        - install-dependencies
+    - deploy-heroku:
+        requires:
+        - build-client-heroku
+        - build-server
+        - test
+        - lint
+        filters:
+          branches:
+            only: master
