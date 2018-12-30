@@ -12,7 +12,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 let sanitizedConfig = _.pick(config, [
     'sentry',
     'logRocket',
-    'sockets'
+    'sockets',
+    'client'
 ]);
 
 const cleanWebpackPlugin = new CleanWebpackPlugin([

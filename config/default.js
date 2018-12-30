@@ -28,5 +28,9 @@ module.exports = {
 
     sockets: {
         host: process.env.SOCKETS_HOST
+    },
+
+    client: {
+        routePrefix: process.env.CLIENT_ROUTE_PREFIX || ''
     }
 };

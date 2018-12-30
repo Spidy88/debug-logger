@@ -51,7 +51,7 @@ catch(err) {
 function App() {
     return (
         <Provider store={store}>
-            <Router>
+            <Router basename={CONFIG.client.routePrefix}>
                 <Switch>
                     <Route exact path="/" component={DebugLogs} />
                 </Switch>
