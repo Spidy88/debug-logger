@@ -66,6 +66,29 @@ jobs:
           paths:
           - dist/client
 
+  build-client-github:
+    executor: node-executor
+    working_directory: ~/webapp
+    environment:
+      NODE_ENV: production
+      SOCKETS_HOST: //debug-logger-demo.herokuapp.com
+      LOGROCKET_DOMAIN: twin-tangents/debug-logger-demo
+      SENTRY_DSN: hhttps://f5ea6e90061d4786b557569671866c79@sentry.io/1362523
+      CLIENT_ROUTE_PREFIX: /debug-logger-demo
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/webapp
+      - run:
+          name: Build Client for GithubIO
+          command: yarn run build:client
+      - store_artifacts:
+          path: ~/webapp/dist/client
+      - persist_to_workspace:
+          root: ~/webapp
+          paths:
+          - dist/client
+
   test:
     executor: node-executor
     working_directory: ~/webapp
@@ -96,6 +119,23 @@ jobs:
       - deploy:
           command: |
             git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/debug-logger-demo.git master
+
+  deploy-githubio:
+    executor: node-executor
+    working_directory: ~/webapp/dist/client
+    steps:
+      - attach_workspace:
+          at: ~/webapp
+      - deploy:
+          command: |
+            git init
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "the.nick.ferraro@gmail.com"
+            git config user.name "CircleCI Deployer"
+            git checkout -b gh-pages
+            git add .
+            git commit -m "$CIRCLE_BUILD_NUM [ci skip]"
+            git push -q https://${GITHUB_TOKEN}@github.com/Spidy88/debug-logger-demo.git gh-pages -f
 
 workflows:
   version: 2
