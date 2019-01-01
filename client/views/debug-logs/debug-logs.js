@@ -6,8 +6,11 @@ import LogControls from './log-controls';
 import EmptyFeedback from '../../components/empty-feedback';
 import ServerStatus from '../../components/server-status';
 import {
+    Avatar,
     Pane,
-    Table
+    SideSheet,
+    Table,
+    Text
 } from 'evergreen-ui';
 
 class DebugLogs extends Component {
@@ -30,9 +33,22 @@ class DebugLogs extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            showSettings: false
+        };
+
+        this.setShowSettings = this.setShowSettings.bind(this);
+        this.openSettings = this.setShowSettings.bind(this, true);
+        this.closeSettings = this.setShowSettings.bind(this, false);
         this.renderEmptyState = this.renderEmptyState.bind(this);
         this.renderServerStatus = this.renderServerStatus.bind(this);
         this.render = this.render.bind(this);
+    }
+
+    setShowSettings(shouldShow) {
+        this.setState({
+            showSettings: shouldShow
+        });
     }
 
     renderEmptyState() {
@@ -95,7 +111,9 @@ class DebugLogs extends Component {
                         query={this.props.query}
                         onPauseSelected={this.props.pauseLogs}
                         onLiveSelected={this.props.resumeLogs}
-                        onQueryChanged={this.props.queryLogs} />
+                        onQueryChanged={this.props.queryLogs}
+                        onSettingsClicked={this.openSettings}
+                        showSettingsControl={true} />
                 </Pane>
 
                 <Box marginTop="calc(40px + 2rem)">
@@ -113,6 +131,29 @@ class DebugLogs extends Component {
                         </Table.Body>
                     </Table>
                 </Box>
+
+                <SideSheet
+                    width={400}
+                    isShown={this.state.showSettings}
+                    onCloseComplete={this.closeSettings}>
+
+                    <Pane
+                        padding="2rem"
+                        marginTop="1rem"
+                        display="flex"
+                        flexDirection="column"
+                        alignItems="center"
+                        justifyContent="center">
+
+                        <Avatar
+                            src="//www.gravatar.com/avatar/d10080dd2e025bc26edd602636016409"
+                            name="Nick Ferraro"
+                            size={96} />
+
+                        <Text fontWeight={500} fontSize="1rem" lineHeight="1.2rem" marginTop={12} marginBottom={4}>Built by</Text>
+                        <Text fontWeight={300} fontSize="1.5rem" lineHeight="1.75rem">Nick Ferraro</Text>
+                    </Pane>
+                </SideSheet>
             </React.Fragment>
         );
     }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Box from 'ui-box';
 
 import {
+    IconButton,
     SearchInput,
     SegmentedControl
 } from 'evergreen-ui';
@@ -23,12 +24,15 @@ class LogControls extends PureComponent {
         query: PropTypes.string,
         onPauseSelected: PropTypes.func.isRequired,
         onLiveSelected: PropTypes.func.isRequired,
-        onQueryChanged: PropTypes.func.isRequired
+        onQueryChanged: PropTypes.func.isRequired,
+        onSettingsClicked: PropTypes.func,
+        showSettingsControl: PropTypes.bool
     };
 
     static defaultProps = {
         isLive: true,
-        query: ''
+        query: '',
+        showSettingsControl: true
     };
 
     constructor(props) {
@@ -36,6 +40,8 @@ class LogControls extends PureComponent {
 
         this.handlePauseResume = this.handlePauseResume.bind(this);
         this.handleQueryChange = this.handleQueryChange.bind(this);
+        this.handleSettingsClicked = this.handleSettingsClicked.bind(this);
+        this.renderSettingsControl = this.renderSettingsControl.bind(this);
         this.render = this.render.bind(this);
     }
 
@@ -55,6 +61,27 @@ class LogControls extends PureComponent {
 
     handleQueryChange(e) {
         this.props.onQueryChanged(e.target.value);
+    }
+
+    handleSettingsClicked() {
+        this.props.onSettingsClicked && this.props.onSettingsClicked();
+    }
+
+    renderSettingsControl() {
+        if( !this.props.showSettingsControl ) {
+            return null;
+        }
+
+        return (
+            <Box marginX="0.75rem" marginY="1rem">
+                <IconButton
+                    appearance="minimal"
+                    icon="cog"
+                    height={40}
+                    test-id="settingsBtn"
+                    onClick={this.handleSettingsClicked} />
+            </Box>
+        );
     }
 
     render() {
@@ -87,6 +114,8 @@ class LogControls extends PureComponent {
                         test-id="logSearch"
                         onChange={this.handleQueryChange} />
                 </Box>
+
+                { this.renderSettingsControl() }
             </React.Fragment>
         );
     }

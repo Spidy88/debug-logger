@@ -9,6 +9,7 @@ describe('<LogControls>', () => {
     let handleLive;
     let handlePause;
     let handleQueryChange;
+    let handleSettingsClick;
 
     beforeEach(() => {
         testQuery = '';
@@ -16,6 +17,7 @@ describe('<LogControls>', () => {
         handleLive = jest.fn();
         handlePause = jest.fn();
         handleQueryChange = jest.fn();
+        handleSettingsClick = jest.fn();
     });
 
     it('should invoke pause callback when live is active', () => {
@@ -25,7 +27,9 @@ describe('<LogControls>', () => {
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
         );
 
         const pauseButton = logControls.find('input[value="pause"]');
@@ -44,7 +48,9 @@ describe('<LogControls>', () => {
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
         );
 
         const liveButton = logControls.find('input[value="live"]');
@@ -61,7 +67,9 @@ describe('<LogControls>', () => {
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
         );
 
         const liveButton = logControls.find('input[value="live"]');
@@ -81,7 +89,9 @@ describe('<LogControls>', () => {
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
         );
 
         const pauseButton = logControls.find('input[value="pause"]');
@@ -98,7 +108,9 @@ describe('<LogControls>', () => {
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={true} />
         );
 
         const searchInput = logControls.find('input[test-id="logSearch"]').first();
@@ -107,14 +119,63 @@ describe('<LogControls>', () => {
         expect(handleQueryChange.mock.calls.length).toEqual(1);
     });
 
-    it('should match its snapshot', () => {
-        const tree = renderer.create(
+    it('should invoke settings callback when the settings button is clicked', () => {
+        const logControls = mount(
             <LogControls
                 query={testQuery}
                 isLive={testIsLive}
                 onLiveSelected={handleLive}
                 onPauseSelected={handlePause}
-                onQueryChanged={handleQueryChange} />
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={true} />
+        );
+
+        const settingsButton = logControls.find('[test-id="settingsBtn"]').first();
+        settingsButton.simulate('click');
+
+        expect(handleSettingsClick.mock.calls.length).toEqual(1);
+    });
+
+    it('should not render a settings control when show is "false"', () => {
+        const logControls = mount(
+            <LogControls
+                query={testQuery}
+                isLive={testIsLive}
+                onLiveSelected={handleLive}
+                onPauseSelected={handlePause}
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
+        );
+
+        const settingsButton = logControls.find('[test-id="settingsBtn"]');
+        expect(settingsButton.length).toEqual(0);
+    });
+
+    it('should match its snapshot (without settings control)', () => {
+        const tree = renderer.create(
+            <LogControls
+                query={testQuery}
+                onLiveSelected={handleLive}
+                onPauseSelected={handlePause}
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={false} />
+        );
+
+        expect(tree.toJSON()).toMatchSnapshot();
+    });
+
+    it('should match its snapshot (with settings control)', () => {
+        const tree = renderer.create(
+            <LogControls
+                query={testQuery}
+                onLiveSelected={handleLive}
+                onPauseSelected={handlePause}
+                onQueryChanged={handleQueryChange}
+                onSettingsClicked={handleSettingsClick}
+                showSettingsControl={true} />
         );
 
         expect(tree.toJSON()).toMatchSnapshot();
