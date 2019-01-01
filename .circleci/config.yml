@@ -74,7 +74,7 @@ jobs:
       SOCKETS_HOST: //debug-logger-demo.herokuapp.com
       LOGROCKET_DOMAIN: twin-tangents/debug-logger-demo
       SENTRY_DSN: hhttps://f5ea6e90061d4786b557569671866c79@sentry.io/1362523
-      CLIENT_ROUTE_PREFIX: /debug-logger-demo
+      CLIENT_ROUTE_PREFIX: /debug-logger
     steps:
       - checkout
       - attach_workspace:
@@ -135,7 +135,7 @@ jobs:
             git checkout -b gh-pages
             git add .
             git commit -m "$CIRCLE_BUILD_NUM [ci skip]"
-            git push -q https://${GITHUB_TOKEN}@github.com/Spidy88/debug-logger-demo.git gh-pages -f
+            git push -q https://${GITHUB_TOKEN}@github.com/Spidy88/debug-logger.git gh-pages -f
 
 workflows:
   version: 2
