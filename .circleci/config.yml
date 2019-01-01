@@ -73,7 +73,7 @@ jobs:
       NODE_ENV: production
       SOCKETS_HOST: //debug-logger-demo.herokuapp.com
       LOGROCKET_DOMAIN: twin-tangents/debug-logger-demo
-      SENTRY_DSN: hhttps://f5ea6e90061d4786b557569671866c79@sentry.io/1362523
+      SENTRY_DSN: https://f5ea6e90061d4786b557569671866c79@sentry.io/1362523
       CLIENT_ROUTE_PREFIX: /debug-logger
     steps:
       - checkout
@@ -118,7 +118,7 @@ jobs:
           at: ~/webapp
       - deploy:
           command: |
-            git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/debug-logger-demo.git master
+            git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/debug-logger-demo.git master -f
 
   deploy-githubio:
     executor: node-executor
@@ -148,6 +148,9 @@ workflows:
     - build-client-heroku:
         requires:
         - install-dependencies
+    - build-client-github:
+        requires:
+        - install-dependencies
     - test:
         requires:
         - install-dependencies
@@ -158,6 +161,14 @@ workflows:
         requires:
         - build-client-heroku
         - build-server
+        - test
+        - lint
+        filters:
+          branches:
+            only: master
+    - deploy-githubio:
+        requires:
+        - build-client-github
         - test
         - lint
         filters:
