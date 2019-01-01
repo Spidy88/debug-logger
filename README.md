@@ -1,11 +1,14 @@
 # Debug Logger
 
 <div align="center">
-  <a href="https://circleci.com/gh/Spidy88/segment.svg?style=svg&circle-token=6cc15c6f13ee8983f23a4492b2c04df39f89dec3">
-    <img src="https://circleci.com/gh/Spidy88/segment.svg?style=svg&circle-token=6cc15c6f13ee8983f23a4492b2c04df39f89dec3" alt="Build Status">
+  <a href="https://circleci.com/gh/Spidy88/debug-logger.svg?style=svg&circle-token=5fecffd656fc57c6fba58a95c6ba6fd46b82244e">
+    <img src="https://circleci.com/gh/Spidy88/debug-logger.svg?style=svg&circle-token=5fecffd656fc57c6fba58a95c6ba6fd46b82244e" alt="Build Status">
   </a>
   <br />
+  <br />
 </div>
+
+[Live Demo](https://debug-logger-demo.herokuapp.com/)
 
 A web application for interacting with debug logs. Any application that sends log data to a redis channel can be hooked
 up to this web application for easy visualization of log events in real time. To quickly get started, you can spin up
