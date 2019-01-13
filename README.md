@@ -10,6 +10,8 @@
 
 [Live Demo](https://debug-logger-demo.herokuapp.com/)
 
+The log stream falls asleep, so you can [Kick the Log Generator](https://debug-logger-demo-stream.herokuapp.com/) here.
+
 A web application for interacting with debug logs. Any application that sends log data to a redis channel can be hooked
 up to this web application for easy visualization of log events in real time. To quickly get started, you can spin up
 the provided docker-compose.yml and see a dmo in action. If you have your own logs to view, you can 
